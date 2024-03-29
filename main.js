@@ -46,6 +46,8 @@ if (pinAnswer.pin === pinCode) {
                 choices: ["1000", "2000", "3000", "4000", "5000", "1000"]
             }
         ]);
+        balance -= fastCashAns.cash;
+        console.log(`Your remaining balance is: ${balance}`);
     }
 }
 else {

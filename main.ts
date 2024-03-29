@@ -44,14 +44,12 @@ let amountAns = await inquirer.prompt(
             console.log("Insufficient Balance");
         } else if( balance -= amountAns.amount) {
         console.log(`Your remaining balance is: ${balance}`);
-
-     }
+    }
 
     } else if(operationAns.operation === "check balance") {
         console.log(`Your balance is: ${balance}`);
 
-       
-} else if(operationAns.operation === "fast cash") {
+    } else if(operationAns.operation === "fast cash") {
     let fastCashAns = await inquirer.prompt(
             [
                 {
@@ -62,10 +60,10 @@ let amountAns = await inquirer.prompt(
                 }
             ]
         );     
-    }   
+        balance -= fastCashAns.cash;
+            console.log(`Your remaining balance is: ${balance}`);
+        }   
 } 
-
-
 else  {
     console.log("Incorrect pin code");
 }
